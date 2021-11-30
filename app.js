@@ -1,7 +1,7 @@
 const formulario = document.getElementById('form')
 const pais = document.getElementById('inputFormulario')
-const elementoContenedorDelPais = document.querySelector('.contenedorPais')
-const cierreBanner = document.querySelector('.cierreBanner')
+const elementoContenedorDelPais = document.documentElement.querySelector('.contenedorPais')
+var cierreBanner = document.documentElement.querySelector('.simboloCierre')
 
 formulario.addEventListener('submit',(e) => {
     e.preventDefault()
@@ -15,9 +15,11 @@ formulario.addEventListener('submit',(e) => {
         let paisEspecifico = `
             <div class="pais">
                 <div class="hola">
+                    <div class="cierreBanner">
+                        <p class="simboloCierre">X<p>
+                    </div>
                     <header>
                         <h2>${pais[0].name.common}</h2>
-                        <p class="cierreBanner">X<p>
                     </header>
 
                     <figure>
@@ -28,24 +30,17 @@ formulario.addEventListener('submit',(e) => {
                         <p>Capital: ${pais[0].capital[0]}
                         <p>Poblacion: ${pais[0].population} </p>
                         <p>Continente: ${pais[0].subregion}</p>
-                        <p>Nombre de la moneda: ${pais[0].currencies.COP.name}</p>
-                        <p>Simbolo de la moneda: ${pais[0].currencies.COP.symbol}</p>
                         <p>Mapa de ${pais[0].name.common}: <a href="${pais[0].maps.googleMaps}
-                        target="_blank">Link</a> </p>
+                        target="_blank" rel="noopener">Link</a> </p>
                     </div>
                 </div>
-            </div>
-             
+            </div>           
         `
         console.log(pais)
         elementoContenedorDelPais.innerHTML = paisEspecifico
     })
 
     formulario.reset()
-
 })
 
-cierreBanner.addEventListener('click',() => {
-    elementoContenedorDelPais.style.visibility = "hidden"
-    elementoContenedorDelPais.style.opacity = "0"
-})
+console.log(document.documentElement)
