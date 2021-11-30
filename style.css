@@ -53,6 +53,60 @@ form button {
     font-size: 1rem;
 }
 
+.contenedorPais {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.pais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.hola {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.hola header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hola header p {
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.pais img {
+    width: 250px;
+    height:200px;
+}
+
+.pais figure {
+    display: flex;
+    justify-content: center;
+}
+
 .contenedorFooter {
     background-color: #ff3b19;
     color: #FFFFFF;
