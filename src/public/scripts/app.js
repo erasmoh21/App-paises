@@ -1,9 +1,9 @@
 import elementosDelDom from "./elementosDelDom.js"
+import busquedaDePaisPorNombre from "./tiposDeBusqueda/busquedaPaisPorNombre.js"
 import busquedaDelPaisPorCapital from "./tiposDeBusqueda/busquedaPorCapital.js"
 import busquedaDelPaisPorIdioma from "./tiposDeBusqueda/busquedaPorIdioma.js"
 import busquedaDePaisPorMoneda from "./tiposDeBusqueda/busquedaPorMoneda.js"
 import cambioDePlaceholderDeInput from "./cambioPlaceHolderInput.js"
-import busquedaDePaisPorNombre from "./busquedaPaisPorNombre.js"
 const select = document.getElementById('tipoDeBusqueda')
 
 elementosDelDom.formulario.addEventListener('submit',(e) => {

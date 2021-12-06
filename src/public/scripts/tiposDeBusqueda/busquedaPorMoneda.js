@@ -1,4 +1,4 @@
-import plantillaDelPais from "./plantillaDePais.js"
+import plantillaDelPais from "../plantillaDePais.js"
 
 export default function busquedaDePaisPorMoneda(moneda) {
     return fetch(`https://restcountries.com/v3.1/currency/${moneda}`)
