@@ -59,6 +59,7 @@ form > div select {
 form button {
     background-color: transparent;
     border: none;
+    outline: none;
     cursor: pointer;
     margin-left: 1rem;
 }
@@ -90,6 +91,19 @@ form button img {
     width: 100%;
 }
 
+.otroContenedor {
+    overflow-y: scroll;
+    height: 400px;
+    width: 400px; 
+}
+
+.otroLoco {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .hola {
     display: flex;
     flex-direction: column;
@@ -98,21 +112,7 @@ form button img {
     background-color: #FFFFFF;
     padding: 2rem;
     border-radius: 5px;
-    overflow-y: scroll;
 }
-
-.hola .cierreBanner {
-    display: flex;
-    justify-content: right;
-    font-size: 20px;
-    font-weight: bolder;
-    width: 100%;
-}
-
-.hola .cierreBanner p {
-    cursor: pointer;
-}
-
 
 .pais img {
     width: 250px;
