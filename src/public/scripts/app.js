@@ -2,7 +2,6 @@ import elementosDelDom from "./utils/elementosDelDom.js"
 import cambioDePlaceholderDeInput from "./utils/cambioPlaceHolderInput.js"
 import manejadorDeTipoDePeticiones from "./utils/manejadorDePeticiones.js"
 
-
 elementosDelDom.formulario.addEventListener('submit',(e) => {
     e.preventDefault()
 

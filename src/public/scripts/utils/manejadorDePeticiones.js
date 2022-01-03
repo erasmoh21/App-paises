@@ -37,7 +37,8 @@ export default function manejadorDeTipoDePeticiones(valorSelect) {
             busquedaDePaisPorNombre(elementosDelDom.pais.value)
             .then(response => {
                 elementosDelDom.elementoContenedorDelPais.innerHTML = response
-            })
+            })    
+            
             break
     }
 }
