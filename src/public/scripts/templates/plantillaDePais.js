@@ -19,5 +19,5 @@ export default function plantillaDelPais(pais) {
                 </div>
             </div>
         </div>        
-        `
+      `
 }

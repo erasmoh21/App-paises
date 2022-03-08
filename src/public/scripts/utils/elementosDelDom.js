@@ -4,7 +4,8 @@ const elementosDelDom = {
     elementoContenedorDelPais: document.querySelector('.contenedorPais'),
     cierreBanner: document.documentElement.querySelector('.simboloCierre'),
     select: document.getElementById('tipoDeBusqueda'),
-    otroContendor: document.querySelector('.otroContenedor')
+    otroContendor: document.querySelector('.otroContenedor'),
+    contenedorSugerencia: document.querySelector('.sugerencia')
 }
 
 export default elementosDelDom
