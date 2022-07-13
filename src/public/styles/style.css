@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+    --colorPrincipalDePagina:#ff3b19;
+}
+
 * {
     padding: 0; 
     margin: 0;
@@ -12,7 +16,7 @@ html {
 }
 
 .contenedorHeader {
-    background-color: #ff3b19;
+    background-color: var(--colorPrincipalDePagina); 
     padding: 1rem 0;
 }
 
@@ -30,6 +34,51 @@ html {
     justify-content: flex-start;
 }
 
+/*PLANTILLA DE ERROR*/
+
+.plantillaError {
+    height: 100%;
+    width: 100%;
+}
+
+.plantillaError_container1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plantillaError_container1 .plantillaError_container2 > div {
+    display: flex;
+}
+
+.plantillaError_container1 .plantillaError_container2 > div > .cierreCard {
+    position: relative;
+    left: 14rem;
+}
+
+.plantillaError_container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 30%;
+    border-radius: 1rem;
+}
+
+.plantillaError_container1 .plantillaError_container2 .contenedorImagen figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not_found {
+    width: 60%;
+    height: 60%;
+}
+
 form {
     display: flex;
     align-items: center;
@@ -41,7 +90,7 @@ form {
 
 form #inputFormulario {
     outline: none;
-    border: 1px solid #ff3b19;
+    border: 1px solid var(--colorPrincipalDePagina);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 45rem;
@@ -51,17 +100,20 @@ form #inputFormulario {
 
 .contenedor-main .contenedorSugerencia {
     display: flex;
-    position: relative;
-    left: 13.2rem;
-    width: 65.3rem;
+    justify-content: center;
+    width: 100%;
 }
+
 .contenedor-main .contenedorSugerencia .sugerencia {
     display: none;
-    border: 1px solid red;
+    border: 1px solid var(--colorPrincipalDePagina);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;   
     width: 45rem;
     border-top: none;
+    position: relative;
+    left: 3.1rem;
+    padding: .5rem;
 }
 
 .contenedor-main .sugerencia .paisesSugeridos {
@@ -79,27 +131,30 @@ form > div {
 
 form > div select {
     outline: none;
-    border: 1px solid #ff3b19;
+    border: 1px solid var(--colorPrincipalDePagina);
     background-color: #FFFFFF;
     border-radius: 5px;
 }
 
+.contenedorTipoDeBusqueda .otroBotonFormulario {
+    display: none;
+}
 
 form button {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-    margin-left: 1rem;
+    margin: 1rem 0 0 1rem;
 }
 
 form button img {
-    background-color: #ff3b19;
+    background-color: var(--colorPrincipalDePagina);
     border-radius: 50%;
     padding: .2rem;
 }
 
-.contenedorPais {
+.contenedorPrincipalSeccionPaises {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -111,6 +166,19 @@ form button img {
     background-color: rgba(0, 0, 0, .3);
 }
 
+.contenedorDelContenedorDePaises {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPaises {
+    overflow-y: scroll;
+    height: 400px;
+    width: 400px; 
+}
+
 .pais {
     display: flex;
     flex-direction: column;
@@ -118,29 +186,6 @@ form button img {
     align-items: center;
     height: 100%;
     width: 100%;
-}
-
-.otroLoco {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.otroContenedor {
-    overflow-y: scroll;
-    height: 400px;
-    width: 400px; 
-}
-
-.hola {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
-    padding: 2rem;
-    border-radius: 5px;
 }
 
 .pais img {
@@ -153,8 +198,40 @@ form button img {
     justify-content: center;
 }
 
+.contenedorCaracteristicasDelPais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.contenedorCaracteristicasDelPais header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contenedorCaracteristicasDelPais header h1 {
+    margin: 0 0 2rem 7rem;
+}
+
+.cierreCard {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.contenedorCaracteristicasDelPais header .cierreCard {
+    font-size: 2rem;
+    position: relative;
+    left: 3rem;
+    bottom: 1.5rem;
+}
+
 .contenedorFooter {
-    background-color: #ff3b19;
+    background-color: var(--colorPrincipalDePagina);
     color: #FFFFFF;
     font-size: 1.6rem;
     padding: 1rem 0;
@@ -166,12 +243,16 @@ form button img {
 
 @media all and (max-width:500px) {
     .contenedorTipoDeBusqueda {
-        margin-bottom: 1rem;
+        display: flex;
+        margin: 0 1rem 1rem 0;
+        align-items: center;
     }
-    .contenedorBotonFormulario {
-        margin-top: 1rem;
+
+    .contenedorTipoDeBusqueda .otroBotonFormulario {
+        display: block;
     }
-    .inputFormulario {
-        width:5rem
+
+    .botonFormulario {
+        display: none;
     }
 }

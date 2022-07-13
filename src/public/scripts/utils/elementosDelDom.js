@@ -1,11 +1,12 @@
 const elementosDelDom = {
     formulario: document.getElementById('form'),
     pais: document.getElementById('inputFormulario'),
-    elementoContenedorDelPais: document.querySelector('.contenedorPais'),
-    cierreBanner: document.documentElement.querySelector('.simboloCierre'),
+    elementoContenedorDelPais: document.querySelector('.contenedorPrincipalSeccionPaises'),
     select: document.getElementById('tipoDeBusqueda'),
-    otroContendor: document.querySelector('.otroContenedor'),
-    contenedorSugerencia: document.querySelector('.sugerencia')
+    contenedorPaises: document.querySelector('.contenedorPaises'),
+    contenedorSugerencia: document.querySelector('.sugerencia'),
+    cierreCard: document.querySelector('.cierreCard'),
+    paisCard: document.querySelector('.pais')
 }
 
 export default elementosDelDom

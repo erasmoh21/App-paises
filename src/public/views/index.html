@@ -19,17 +19,25 @@
         <section class="contenedor-main">
             <form id="form">
                 <div class="contenedorTipoDeBusqueda">
-                    <p>Tipo de Busqueda: </p>
-                    <select name="tipoDeBusqueda" id="tipoDeBusqueda">
-                        <option value="nombre">Por Nombre</option>
-                        <option value="capital">Por Capital</option>
-                        <option value="idioma">Por Idioma</option>
-                        <option value="moneda">Por Moneda</option>
-                    </select>
+                    <div>
+                        <div>
+                            <label for="tipoDeBusqueda">Tipo de Busqueda: </label>
+                        </div>
+                        <select name="tipoDeBusqueda" id="tipoDeBusqueda">
+                            <option value="nombre">Por Nombre</option>
+                            <option value="capital">Por Capital</option>
+                            <option value="idioma">Por Idioma</option>
+                            <option value="moneda">Por Moneda</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="otroBotonFormulario"><img src="../imgs/search_black_24dp.svg" alt=""></button>
                 </div>
+
                 <input type="text" placeholder="Digite el nombre del pais" name="pais" id="inputFormulario">
+
                 <div class="contenedorBotonFormulario">
-                    <button type="submit"><img src="../imgs/search_black_24dp.svg" alt=""></button>
+                    <button type="submit" class="botonFormulario"><img src="../imgs/search_black_24dp.svg" alt=""></button>
                 </div>
             </form>
             <div class="contenedorSugerencia">
@@ -39,9 +47,9 @@
             </div>
         </section>
 
-        <section class="contenedorPais">
-            <div class="otroLoco">
-                <div class="otroContenedor">
+        <section class="contenedorPrincipalSeccionPaises">
+            <div class="contenedorDelContenedorDePaises">
+                <div class="contenedorPaises">
                 </div>
             </div>
         </section>
@@ -52,6 +60,5 @@
             <h3>Todos los derechos reservados a Jose Erasmo Hernandez</h3>
         </div>
     </footer>
-    
 </body>
 </html>
