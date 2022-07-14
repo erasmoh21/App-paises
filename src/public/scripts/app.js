@@ -1,4 +1,5 @@
 import elementosDelDom from "./utils/elementosDelDom.js"
+import validacionInputPrincipal from "./utils/validarInputPrincipal.js"
 import cambioDePlaceholderDeInput from "./utils/cambioPlaceHolderInput.js"
 import manejadorDeTipoDePeticiones from "./utils/manejadorDePeticiones.js"
 import buscarCoincidencias from './busquedaCoincidenciasInput/busquedaCoincidencias.js'
@@ -7,13 +8,18 @@ let paisABuscar = ''
 
 elementosDelDom.formulario.addEventListener('submit',(e) => {
     e.preventDefault()
+    const pais = elementosDelDom.pais.value
+    const valorDelSelect = elementosDelDom.select.value
 
-    elementosDelDom.elementoContenedorDelPais.style.visibility = "visible"
-    elementosDelDom.elementoContenedorDelPais.style.opacity = "1"
-
-    manejadorDeTipoDePeticiones(elementosDelDom.select.value,elementosDelDom.pais.value)
-
-    elementosDelDom.formulario.reset()
+    if(validacionInputPrincipal(pais,valorDelSelect) != null) {
+        elementosDelDom.contenedorMain.innerHTML += validacionInputPrincipal(pais,valorDelSelect)
+    }
+    else {
+        elementosDelDom.elementoContenedorDelPais.style.visibility = "visible"
+        elementosDelDom.elementoContenedorDelPais.style.opacity = "1"
+        manejadorDeTipoDePeticiones(valorDelSelect,pais)
+        elementosDelDom.formulario.reset()
+    }
 })
 
 elementosDelDom.select.addEventListener('change',() => {
@@ -28,12 +34,11 @@ elementosDelDom.pais.addEventListener('keyup', (e) => {
         if(!e.metaKey) {
             paisABuscar += e.key 
         }
-        console.log(paisABuscar)
     }
     
     elementosDelDom.contenedorSugerencia.style.display = "block"
     buscarCoincidencias(paisABuscar).forEach(el => {
-        elementosDelDom.contenedorSugerencia.innerHTML = `<p class="paisesSugeridos">${el}</p>` 
+        elementosDelDom.contenedorSugerencia.innerHTML = `<p class='paisesSugeridos'>${el}</p>` 
     })
 })
 

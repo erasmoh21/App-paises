@@ -22,4 +22,3 @@ export default function buscarCoincidencias(nombrePais="") {
     })
    return arregloDePaises
 }
-

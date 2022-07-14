@@ -6,7 +6,8 @@ const elementosDelDom = {
     contenedorPaises: document.querySelector('.contenedorPaises'),
     contenedorSugerencia: document.querySelector('.sugerencia'),
     cierreCard: document.querySelector('.cierreCard'),
-    paisCard: document.querySelector('.pais')
+    paisCard: document.querySelector('.pais'),
+    contenedorMain: document.querySelector('.contenedor-main')
 }
 
 export default elementosDelDom

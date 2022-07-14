@@ -4,7 +4,7 @@ export default function plantillaError(nombreDelPais="") {
             <div class="plantillaError_container1">
                 <div class="plantillaError_container2">
                     <div>
-                        <p>${nombreDelPais} no fue encontrado</p> 
+                        <p class="mensajeDeError"><span>${nombreDelPais}</span> no fue encontrado</p> 
                         <p class="cierreCard">X</p>
                     </div>
                     <div class="contenedorImagen">
